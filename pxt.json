@@ -9,7 +9,7 @@
     "files": [
         "README.md",
         "ssd1306_kr.ts",
-        "ssd1306_kr,cpp",
+        "ssd1306_kr.cpp",
         "Adafruit_SSD1306.h",
         "Adafruit_SSD1306.cpp",
         "Adafruit_GFX.h",
