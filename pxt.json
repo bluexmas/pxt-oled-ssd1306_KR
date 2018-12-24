@@ -1,0 +1,25 @@
+{
+    "name": "pxt-oled-ssd1306_KR",
+    "version": "0.0.3",
+    "description": "http://bluexmas.tistory.com/886",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "ssd1306_kr.ts",
+        "ssd1306_kr,cpp",
+        "Adafruit_SSD1306.h",
+        "Adafruit_SSD1306.cpp",
+        "Adafruit_GFX.h",
+        "Adafruit_GFX.cpp",
+        "Adafruit_GFX_Config.h",
+        "glcdfont.h",
+        "pgmspace.h"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
