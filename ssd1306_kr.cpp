@@ -43,9 +43,9 @@ namespace OLED_KR {
 		*/
 
 		const char *mymsg = (const char *)text->data;
-		for (int i=0; i<strlen(mymsg); i++) {
+		while(*mymsg){ 
 			//spring(buf, "%02X ", mymsg[i]);
-			oled->printf("%02X ", mymsg[i]);
+			oled->printf("%02X ", mymsg++);
 		}
 /*
 		char *teststr;
