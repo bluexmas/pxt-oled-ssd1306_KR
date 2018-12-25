@@ -4,7 +4,7 @@
 using namespace pxt;
 
 namespace OLED_KR {
-	
+
 	#define SSD1306_ADDRESS 0x78
 	#undef printf
 
@@ -36,7 +36,12 @@ namespace OLED_KR {
 
 	//%
     void showStringNoNewLine(String text) {
-		oled->printf("%s", PXT_BUFFER_DATA(text));
+
+
+		for (int i=0; i<sizeof(text); i++) {
+			oled->printf("%02X ", text->data[i]);
+		}
+
 		oled->display();
     }
 }
