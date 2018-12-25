@@ -26,17 +26,6 @@ namespace OLED_KR {
         return;
     }
 
-    /**
-     * clears the screen.
-     */
-    //% blockId=oled_clear_screen
-    //% block="clear OLED display"
-    //% icon="\uf1ec" 
-    //% shim=OLED_KR::clearDisplay
-    export function clear(): void {
-        return;
-    }
-
 /**
       * prints a string on the OLED display
       * @param text text to display, eg: "Hello, OLED!"
