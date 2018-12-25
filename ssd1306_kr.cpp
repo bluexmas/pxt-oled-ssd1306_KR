@@ -41,12 +41,21 @@ namespace OLED_KR {
 			oled->printf("%02X ", text->data[i]);
 		}
 		*/
+		ManagedString inputString = uBit.serial.readUntil(MSTR(text));
+		//char paramChar[inputString.length()+1];
+		char *paramChar = (char *)inputString.toCharArray();
+		while(*paramChar){ 
+			//spring(buf, "%02X ", mymsg[i]);
+			oled->printf("%02X ", (char *)paramChar++);
+		}
 
+		/*
 		const char *mymsg = (const char *)text->data;
 		while(*mymsg){ 
 			//spring(buf, "%02X ", mymsg[i]);
-			oled->printf("%02X ", mymsg++);
+			oled->printf("%02X", mymsg++);
 		}
+		*/
 /*
 		char *teststr;
 		mystrtod(text->data, teststr);
