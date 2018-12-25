@@ -36,12 +36,26 @@ namespace OLED_KR {
 
 	//%
     void showStringNoNewLine(String text) {
-
-
+		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
 		}
+		*/
 
+		const char *mymsg = (const char *)text->data;
+		for (int i=0; i<strlen(mymsg); i++) {
+			//spring(buf, "%02X ", mymsg[i]);
+			oled->printf("%02X ", mymsg[i]);
+		}
+/*
+		char *teststr;
+		mystrtod(text->data, teststr);
+*/
+/*
+		for (int i=0; i<text->count; i++) {
+			oled->printf("%02X ", text->data[i]);
+		}
+*/
 		oled->display();
     }
 }
