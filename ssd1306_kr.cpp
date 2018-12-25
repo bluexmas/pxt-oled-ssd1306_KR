@@ -38,7 +38,7 @@ namespace OLED_KR {
     void showStringNoNewLine(String text) {
 
 
-		for (int i=0; i<sizeof(text); i++) {
+		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
 		}
 
