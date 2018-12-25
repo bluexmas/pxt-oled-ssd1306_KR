@@ -24,4 +24,10 @@ namespace OLED_KR {
 		oled->clearDisplay();
 		oled->display();
 	}
+
+	//%
+    void showStringNoNewLine(String text) {
+		oled->printf("%s", PXT_BUFFER_DATA(text));
+		oled->display();
+    }
 }
