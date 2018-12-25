@@ -44,10 +44,15 @@ namespace OLED_KR {
 		ManagedString inputString = uBit.serial.readUntil(MSTR(text));
 		//char paramChar[inputString.length()+1];
 		char *paramChar = (char *)inputString.toCharArray();
+		for (int i=0; i<strlen(paramChar); i++) {
+			oled->printf("%02X ", (char *)paramChar++);
+		}
+		/*
 		while(*paramChar){ 
 			//spring(buf, "%02X ", mymsg[i]);
 			oled->printf("%02X ", (char *)paramChar++);
 		}
+		*/
 
 		/*
 		const char *mymsg = (const char *)text->data;
