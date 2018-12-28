@@ -42,9 +42,9 @@ namespace OLED_KR {
 		}
 		*/
 
-		
-		oled->printf("%s ", 'b');
-		for (int i=0; i<strlen(text->data); i++) {
+		//text->data = "AA한글BB";
+		oled->printf("%s ", 'c');
+		for (int i=0; i<text->length; i++) {
 			//spring(buf, "%02X ", mymsg[i]);
 			oled->printf("%02X ", text->data[i]);
 		}
