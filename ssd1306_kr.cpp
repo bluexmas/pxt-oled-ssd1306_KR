@@ -41,6 +41,16 @@ namespace OLED_KR {
 			oled->printf("%02X ", text->data[i]);
 		}
 		*/
+
+		
+		oled->printf("%s ", 'a');
+		for (int i=0; i<strlen(text->data); i++) {
+			//spring(buf, "%02X ", mymsg[i]);
+			oled->printf("%02X ", text->data[i]);
+		}
+
+
+		/*
 		//ManagedString inputString = uBit.serial.readUntil(MSTR(text));
 		ManagedString inputString = MSTR(text);
 		//char paramChar[inputString.length()+1];
@@ -48,6 +58,15 @@ namespace OLED_KR {
 		for (int i=0; i<strlen(paramChar); i++) {
 			oled->printf("%02X ", (char *)paramChar++);
 		}
+		*/
+		/*
+		// StringData 
+		const char *bytes = (const char*)text->data;
+		int len = wcslen(text->data) * 2;
+		for (size_t i = 0; i < len; i++)
+			printf("%02X ", 0xFF & bytes[i]);
+		printf("\n");
+		*/
 		/*
 		while(*paramChar){ 
 			//spring(buf, "%02X ", mymsg[i]);
