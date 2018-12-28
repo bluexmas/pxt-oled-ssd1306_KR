@@ -43,7 +43,7 @@ namespace OLED_KR {
 		*/
 
 		
-		oled->printf("%s ", 'a');
+		oled->printf("%s ", 'b');
 		for (int i=0; i<strlen(text->data); i++) {
 			//spring(buf, "%02X ", mymsg[i]);
 			oled->printf("%02X ", text->data[i]);
