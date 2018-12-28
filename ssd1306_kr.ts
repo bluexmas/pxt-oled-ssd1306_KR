@@ -2,7 +2,7 @@
 namespace OLED_KR {
 
     /**
-     * initialises the i2c OLED display
+     * initialises the i2c OLED display 2
      * @param height height (in pixels), eg: 64
      * @param width width (in pixels), eg: 128
      */
