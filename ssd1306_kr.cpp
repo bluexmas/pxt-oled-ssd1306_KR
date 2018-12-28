@@ -35,7 +35,7 @@ namespace OLED_KR {
 	}
 
 	//%
-    void showStringNoNewLine(String text) {
+    void showStringNoNewLine(StringData* text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
@@ -43,12 +43,19 @@ namespace OLED_KR {
 		*/
 
 		//text->data = "AA한글BB";
-		oled->printf("%s ", 'c');
+		oled->printf("%s ", 'd');
+
+		ManagedString s(text);
+		char *paramChar = (char *)s.toCharArray();
+		for (int i=0; i<strlen(paramChar); i++) {
+			oled->printf("%02X ", (char *)paramChar++);
+		}
+/*
 		for (int i=0; i<text->length; i++) {
 			//spring(buf, "%02X ", mymsg[i]);
 			oled->printf("%02X ", text->data[i]);
 		}
-
+*/
 
 		/*
 		//ManagedString inputString = uBit.serial.readUntil(MSTR(text));
