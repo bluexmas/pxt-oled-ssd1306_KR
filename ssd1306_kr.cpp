@@ -41,7 +41,8 @@ namespace OLED_KR {
 			oled->printf("%02X ", text->data[i]);
 		}
 		*/
-		ManagedString inputString = uBit.serial.readUntil(MSTR(text));
+		//ManagedString inputString = uBit.serial.readUntil(MSTR(text));
+		ManagedString inputString = MSTR(text);
 		//char paramChar[inputString.length()+1];
 		char *paramChar = (char *)inputString.toCharArray();
 		for (int i=0; i<strlen(paramChar); i++) {
