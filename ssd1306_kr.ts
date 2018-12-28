@@ -2,13 +2,13 @@
 namespace OLED_KR {
 
     /**
-     * initialises the i2c OLED display 2
+     * initialises the i2c OLED display
      * @param height height (in pixels), eg: 64
      * @param width width (in pixels), eg: 128
      */
     //% blockId=oled_init_terminal
     //% weight=100
-    //% block="initialize OLED with height %height|width %width"
+    //% block="initialize OLED 3 with height %height|width %width"
     //% icon="\uf1ec" 
     //% shim=OLED_KR::init_terminal
     export function init(height: number, width: number): void {
