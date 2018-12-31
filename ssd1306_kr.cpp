@@ -35,24 +35,39 @@ namespace OLED_KR {
 	}
 
 	//%
-    void showStringNoNewLine(String text) {
+    void showStringNoNewLine(StringData *text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
 		}
 		*/
-		
+/*
+class BoxedString : public RefObject {
+  public:
+    uint16_t length;
+    char data[0];
+    BoxedString() : RefObject(PXT_REF_TAG_STRING) {}
+};
+
+String mkString(const char *data, int len = -1);
+
+
+*/
+		/*
 		oled->printf("%s, len = %d\n", "16", text->length);
 		oled->printf("%s\n", PXT_BUFFER_DATA(text));
 
 		char *paramChar = PXT_BUFFER_DATA(text);
 		oled->printf("%d,%d\n", sizeof(paramChar), strlen(paramChar));
-
-		char mymsg[] = "한글출력";
+*/
+		char mymsg[] = "AA한글BB";
 		for (int i=0; i<strlen(mymsg); i++) {
 			//spring(buf, "%02X ", mymsg[i]);
 			oled->printf("%02X ", mymsg[i]);
 		}
+		
+
+		oled->printf("%s, len = %d\n", "18", text->len);
 /*
 		char *test111;
 
@@ -60,19 +75,19 @@ namespace OLED_KR {
         memset(test111, 0, text->length);
         // save data
         memcpy(test111, PXT_BUFFER_DATA(text), text->length);
-
+*/
 		//text->data = "AA한글BB";
-		oled->printf("%s, len = %d\n", "13", text->length);
+		//oled->printf("%s, len = %d\n", "13", text->length);
 		oled->printf("%s\n", PXT_BUFFER_DATA(text));
 
-		ManagedString PXT_BUFFER_DATA(text);
+		ManagedString s(text);
 		char *paramChar = (char *)s.toCharArray();
 		oled->printf("%d\n", s.length());
 	
 		for (int i=0; i<s.length(); i++) {
 			oled->printf(",%02X ", paramChar++);
 		}
-*/		
+	
 /*
 		for (int i=0; i<text->length; i++) {
 			//spring(buf, "%02X ", mymsg[i]);
