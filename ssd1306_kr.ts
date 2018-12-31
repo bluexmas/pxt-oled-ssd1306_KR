@@ -31,7 +31,7 @@ namespace OLED_KR {
       * @param text text to display, eg: "Hello, OLED!"
       */
     //% block="write string %text" blockId=oled_print_stringNoNewLine blockGap=8
-    //% shim = OLED_KR:: showStringNoNewLine
+    //% shim=OLED_KR::showStringNoNewLine
     export function showStringNoNewLine(text: string): void {
         console.log("display: " + text);
         return;
