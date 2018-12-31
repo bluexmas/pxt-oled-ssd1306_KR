@@ -38,6 +38,7 @@ namespace OLED_KR {
      //% shim=OLED_KR::showStringNoNewLine
     export function showStringNoNewLine(text: string): void {
         // console.log("display: " + text);
+        OLED_KR.han(text);
         return;
     }
 }
