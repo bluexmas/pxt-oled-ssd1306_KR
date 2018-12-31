@@ -24,9 +24,6 @@
     ],
     "public": true,
     "targetVersion": "0.11.9",
-    "dependencies": {
-        "core": "*"
-    },
     "yotta": {
         "config": {
             "microbit-dal": {
