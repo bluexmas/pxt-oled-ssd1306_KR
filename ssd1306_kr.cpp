@@ -35,7 +35,7 @@ namespace OLED_KR {
 	}
 
 	//%
-    void showStringNoNewLine(StringData* text) {
+	void test(StringData* text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
@@ -43,7 +43,7 @@ namespace OLED_KR {
 		*/
 
 		//text->data = "AA한글BB";
-		oled->printf("%s\n", "1");
+		oled->printf("%s\n", "2");
 
 		ManagedString s(text);
 		char *paramChar = (char *)s.toCharArray();
