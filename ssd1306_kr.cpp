@@ -34,8 +34,8 @@ namespace OLED_KR {
 		oled->display();
 	}
 
-	//% weight=0
-    void showStringNoNewLine(StringData* text) {
+	//%
+    void showStringNoNewLine(String text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
@@ -43,10 +43,10 @@ namespace OLED_KR {
 		*/
 
 		//text->data = "AA한글BB";
-		oled->printf("%s, len = %d\n", "12", text->len);
+		oled->printf("%s, len = %d\n", "13", text->length);
 		oled->printf("%s", PXT_BUFFER_DATA(text));
 
-		ManagedString s(text);
+		ManagedString s(text->data);
 		char *paramChar = (char *)s.toCharArray();
 		oled->printf("%d\n", s.length());
 	
