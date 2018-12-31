@@ -8,7 +8,7 @@ namespace OLED_KR {
      */
     //% blockId=oled_init_terminal
     //% weight=100
-    //% block="initialize OLED with height %height|width %width"
+    //% block="initialize OLED 3 with height %height|width %width"
     //% icon="\uf1ec" 
     //% shim=OLED_KR::init_terminal
     export function init(height: number, width: number): void {
@@ -29,16 +29,15 @@ namespace OLED_KR {
 /**
       * prints a string on the OLED display
       * @param text text to display, eg: "Hello, OLED!"
-      * //% shim=OLED_KR::showStringNoNewLine
       */
      //% weight=92 blockGap=8
      //% block="show (without newline)|string %text" 
      //% async
      //% blockId=oled_print_stringNoNewLine
      //% icon="\uf1ec"
+     //% shim=OLED_KR::showStringNoNewLine
      export function showStringNoNewLine(text: string): void {
-        //console.log("display: " + text);
-         OLED_KR.test(text);
+        // console.log("display: " + text);
         return;
     }
 }
