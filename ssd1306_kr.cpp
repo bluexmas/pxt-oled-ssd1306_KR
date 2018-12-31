@@ -35,7 +35,7 @@ namespace OLED_KR {
 	}
 
 	//%
-    void showStringNoNewLine(String text) {
+    void showStringNoNewLine2(String text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
@@ -139,8 +139,8 @@ String mkString(const char *data, int len = -1);
 		oled->display();
     }
 
-	//% weight=0 advanced=true
-    void han(StringData *text) {
+	//% 
+    void showStringNoNewLine(StringData *text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);

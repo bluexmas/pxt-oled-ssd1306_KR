@@ -30,14 +30,10 @@ namespace OLED_KR {
       * prints a string on the OLED display
       * @param text text to display, eg: "Hello, OLED!"
       */
-     //% weight=92 blockGap=8
-     //% block="show (without newline)|string %text" advanced=true
-     //% async
-     //% blockId=oled_print_stringNoNewLine
-     //% icon="\uf1ec"
+    //% block="write string %text" blockId=oled_print_stringNoNewLine blockGap=8
+    //% shim = OLED_KR:: showStringNoNewLine
     export function showStringNoNewLine(text: string): void {
-        // console.log("display: " + text);
-        OLED_KR.han(text);
+        console.log("display: " + text);
         return;
     }
 }
