@@ -41,11 +41,11 @@ namespace OLED_KR {
 			oled->printf("%02X ", text->data[i]);
 		}
 		*/
-		oled->printf("%s, len = %d\n", "14", text->length);
+		oled->printf("%s, len = %d\n", "15", text->length);
 		oled->printf("%s\n", PXT_BUFFER_DATA(text));
 
-		auto ptr = PXT_BUFFER_DATA(text);
-		oled->printf("%d\n", sizeof(ptr));
+		char *paramChar = PXT_BUFFER_DATA(text);
+		oled->printf("%d,%d\n", sizeof(paramChar), strlen(paramChar));
 /*
 		char *test111;
 
