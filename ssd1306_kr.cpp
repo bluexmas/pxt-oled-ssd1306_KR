@@ -43,13 +43,13 @@ namespace OLED_KR {
 		*/
 
 		//text->data = "AA한글BB";
-		oled->printf("%s\n", 'e');
+		oled->printf("%s\n", '1');
 
 		ManagedString s(text);
 		char *paramChar = (char *)s.toCharArray();
-		oled->printf("%d\n", strlen(paramChar));
+		oled->printf("%d\n", s.length());
 	
-		for (int i=0; i<strlen(paramChar); i++) {
+		for (int i=0; i<s.length(); i++) {
 			oled->printf(",%02X ", paramChar++);
 		}
 /*
