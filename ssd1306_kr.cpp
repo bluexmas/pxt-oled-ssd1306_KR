@@ -43,7 +43,8 @@ namespace OLED_KR {
 		*/
 
 		//text->data = "AA한글BB";
-		oled->printf("%s, len = %d\n", "11", text->len);
+		oled->printf("%s, len = %d\n", "12", text->len);
+		oled->printf("%s", PXT_BUFFER_DATA(text));
 
 		ManagedString s(text);
 		char *paramChar = (char *)s.toCharArray();
