@@ -41,11 +41,18 @@ namespace OLED_KR {
 			oled->printf("%02X ", text->data[i]);
 		}
 		*/
-		oled->printf("%s, len = %d\n", "15", text->length);
+		
+		oled->printf("%s, len = %d\n", "16", text->length);
 		oled->printf("%s\n", PXT_BUFFER_DATA(text));
 
 		char *paramChar = PXT_BUFFER_DATA(text);
 		oled->printf("%d,%d\n", sizeof(paramChar), strlen(paramChar));
+
+		char mymsg[] = "한글출력";
+		for (int i=0; i<strlen(mymsg); i++) {
+			//spring(buf, "%02X ", mymsg[i]);
+			oled->printf("%02X ", mymsg[i]);
+		}
 /*
 		char *test111;
 
