@@ -8,7 +8,7 @@ namespace OLED_KR {
      */
     //% blockId=oled_init_terminal
     //% weight=100
-    //% block="initialize OLED 3 with height %height|width %width"
+    //% block="initialize OLED with height %height|width %width"
     //% icon="\uf1ec" 
     //% shim=OLED_KR::init_terminal
     export function init(height: number, width: number): void {

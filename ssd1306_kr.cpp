@@ -46,9 +46,11 @@ namespace OLED_KR {
 		oled->printf("%s\n", 'e');
 
 		ManagedString s(text);
+		oled->printf("%d\n", strlen(paramChar));
+
 		char *paramChar = (char *)s.toCharArray();
 		for (int i=0; i<strlen(paramChar); i++) {
-			oled->printf("%02X ", paramChar++);
+			oled->printf(",%02X ", paramChar++);
 		}
 /*
 		for (int i=0; i<text->length; i++) {
