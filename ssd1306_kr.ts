@@ -31,11 +31,10 @@ namespace OLED_KR {
       * @param text text to display, eg: "Hello, OLED!"
       */
      //% weight=92 blockGap=8
-     //% block="show (without newline)|string %text" 
+     //% block="show (without newline)|string %text" advanced=true
      //% async
      //% blockId=oled_print_stringNoNewLine
      //% icon="\uf1ec"
-     //% shim=OLED_KR::showStringNoNewLine
     export function showStringNoNewLine(text: string): void {
         // console.log("display: " + text);
         OLED_KR.han(text);
