@@ -173,7 +173,7 @@ String mkString(const char *data, int len = -1);
 		}
 */		
 
-		oled->printf("%s, len = %d\n", "21", text->len);
+		oled->printf("%s, len = %d\n", "22", text->len);
 /*
 		char *test111;
 
