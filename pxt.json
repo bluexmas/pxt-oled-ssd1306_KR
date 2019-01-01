@@ -4,7 +4,7 @@
     "description": "http://bluexmas.tistory.com/886",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "file:../core"
     },
     "files": [
         "README.md",
