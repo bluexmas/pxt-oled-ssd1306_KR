@@ -35,7 +35,7 @@ namespace OLED_KR {
 	}
 
 	//%
-    void showStringNoNewLine2(String text) {
+    void showStringNoNewLine(String text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
@@ -54,11 +54,22 @@ String mkString(const char *data, int len = -1);
 
 */
 		
-		oled->printf("%s, len = %d\n", "16", text->length);
+		oled->printf("%s, len = %d\n", "23", text->length);
 		oled->printf("%s\n", PXT_BUFFER_DATA(text));
 
-		char *paramChar = PXT_BUFFER_DATA(text);
-		oled->printf("%d,%d\n", sizeof(paramChar), strlen(paramChar));
+
+
+		ManagedString s = MSTR(text);
+		char *paramChar = (char *)s.toCharArray();
+		oled->printf("%d\n", s.length());
+	
+		for (int i=0; i<s.length(); i++) {
+			oled->printf(",%02X ", paramChar++);
+		}
+
+
+	//	char *paramChar = PXT_BUFFER_DATA(text);
+	//	oled->printf("%d,%d\n", sizeof(paramChar), strlen(paramChar));
 
 /*
 		char mymsg[] = "AA한글BB";
@@ -140,7 +151,7 @@ String mkString(const char *data, int len = -1);
     }
 
 	//% 
-    void showStringNoNewLine(StringData *text) {
+    void showStringNoNewLine2(StringData *text) {
 		/*
 		for (int i=0; i<text->length; i++) {
 			oled->printf("%02X ", text->data[i]);
